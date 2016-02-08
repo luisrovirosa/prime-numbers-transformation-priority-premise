@@ -20,10 +20,6 @@ class PrimeGenerator
             $factor++;
         }
 
-        if ($number > 1) {
-            $factors[] = $number;
-        }
-
         return $factors;
     }
 }
