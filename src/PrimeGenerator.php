@@ -11,7 +11,7 @@ class PrimeGenerator
     {
         $factors = [];
         if ($number > 1) {
-            $factors[] = 2;
+            $factors[] = $number;
         }
 
         return $factors;
