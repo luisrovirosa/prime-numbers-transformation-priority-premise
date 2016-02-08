@@ -25,19 +25,19 @@ class PrimeFactorsTest extends \PHPUnit_Framework_TestCase
      * @dataProvider primeNumbers
      * @test
      */
-    public function the_factors_of_a_prime_number_is_the_prime_number($factors, $number)
+    public function the_factors_of_a_prime_number_is_the_prime_number($number)
     {
-        $this->assertExpectedFactors($factors, $number);
+        $this->assertExpectedFactors([$number], $number);
     }
 
     public function primeNumbers(): array
     {
         return [
-            [[2], 2],
-            [[3], 3],
-            [[5], 5],
-            [[7], 7],
-            [[11], 11],
+            [2],
+            [3],
+            [5],
+            [7],
+            [11],
         ];
     }
 
