@@ -35,6 +35,8 @@ class PrimeFactorsTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertExpectedFactors([2, 2], 4);
         $this->assertExpectedFactors([2, 2, 2], 8);
+        $this->assertExpectedFactors([2, 2, 2, 2], 16);
+        $this->assertExpectedFactors([2, 2, 2, 2, 2], 32);
     }
 
     public function primeNumbers(): array
