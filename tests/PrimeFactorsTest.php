@@ -34,6 +34,7 @@ class PrimeFactorsTest extends \PHPUnit_Framework_TestCase
     public function the_factors_of_a_power_of_2_is_composed_by_two()
     {
         $this->assertExpectedFactors([2, 2], 4);
+        $this->assertExpectedFactors([2, 2, 2], 8);
     }
 
     public function primeNumbers(): array

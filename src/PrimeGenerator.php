@@ -11,7 +11,7 @@ class PrimeGenerator
     {
         $factors = [];
 
-        if ($number % 2 == 0) {
+        while ($number % 2 == 0) {
             $factors[] = 2;
             $number /= 2;
         }
