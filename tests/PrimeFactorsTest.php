@@ -18,14 +18,23 @@ class PrimeFactorsTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function the_factors_of_one_is_an_empty_list()
     {
-        $this->assertEquals([], $this->primeGenerator->generate(1));
+        $this->assertExpectedFactors([], 1);
     }
 
     /** @test */
     public function the_factors_of_a_prime_number_is_the_prime_number()
     {
-        $this->assertEquals([2], $this->primeGenerator->generate(2));
-        $this->assertEquals([3], $this->primeGenerator->generate(3));
+        $this->assertExpectedFactors([2], 2);
+        $this->assertExpectedFactors([3], 3);
+    }
+
+    /**
+     * @param $factors
+     * @param $number
+     */
+    private function assertExpectedFactors($factors, $number)
+    {
+        $this->assertEquals($factors, $this->primeGenerator->generate($number));
     }
 
 }
