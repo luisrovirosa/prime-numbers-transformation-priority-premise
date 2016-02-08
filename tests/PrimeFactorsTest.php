@@ -48,6 +48,12 @@ class PrimeFactorsTest extends \PHPUnit_Framework_TestCase
         $this->assertExpectedFactors([3, 3, 3, 3, 3], 3 * 3 * 3 * 3 * 3);
     }
 
+    /** @test */
+    public function the_factors_of_multiples_primes_are_the_primes()
+    {
+        $this->assertExpectedFactors([2, 3, 5, 7, 11, 17], 2 * 3 * 5 * 7 * 11 * 17);
+    }
+
     public function primeNumbers(): array
     {
         return [
