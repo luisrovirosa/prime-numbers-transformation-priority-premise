@@ -34,7 +34,10 @@ class PrimeFactorsTest extends \PHPUnit_Framework_TestCase
     {
         return [
             [[2], 2],
-            [[3], 3]
+            [[3], 3],
+            [[5], 5],
+            [[7], 7],
+            [[11], 11],
         ];
     }
 
