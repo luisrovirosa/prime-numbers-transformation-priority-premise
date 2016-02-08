@@ -12,16 +12,12 @@ class PrimeGenerator
         $factors = [];
 
         $factor = 2;
-        if ($number > 1) {
+        while ($number > 1) {
             while ($number % $factor == 0) {
                 $factors[] = $factor;
                 $number /= $factor;
             }
-
-            while ($number % 3 == 0) {
-                $factors[] = 3;
-                $number /= 3;
-            }
+            $factor++;
         }
 
         if ($number > 1) {
