@@ -9,6 +9,11 @@ class PrimeGenerator
      */
     public function generate(int $number): array
     {
-        return [];
+        $factors = [];
+        if ($number > 1) {
+            $factors[] = 2;
+        }
+
+        return $factors;
     }
 }
