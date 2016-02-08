@@ -39,6 +39,15 @@ class PrimeFactorsTest extends \PHPUnit_Framework_TestCase
         $this->assertExpectedFactors([2, 2, 2, 2, 2], 32);
     }
 
+    /** @test */
+    public function the_factors_of_a_power_of_3_is_composed_by_threes()
+    {
+        $this->assertExpectedFactors([3, 3], 9);
+        $this->assertExpectedFactors([3, 3, 3], 3 * 3 * 3);
+        $this->assertExpectedFactors([3, 3, 3, 3], 3 * 3 * 3 * 3);
+        $this->assertExpectedFactors([3, 3, 3, 3, 3], 3 * 3 * 3 * 3 * 3);
+    }
+
     public function primeNumbers(): array
     {
         return [
