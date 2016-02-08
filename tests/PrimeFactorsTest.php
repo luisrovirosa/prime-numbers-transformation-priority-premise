@@ -21,11 +21,21 @@ class PrimeFactorsTest extends \PHPUnit_Framework_TestCase
         $this->assertExpectedFactors([], 1);
     }
 
-    /** @test */
-    public function the_factors_of_a_prime_number_is_the_prime_number()
+    /**
+     * @dataProvider primeNumbers
+     * @test
+     */
+    public function the_factors_of_a_prime_number_is_the_prime_number($factors, $number)
     {
-        $this->assertExpectedFactors([2], 2);
-        $this->assertExpectedFactors([3], 3);
+        $this->assertExpectedFactors($factors, $number);
+    }
+
+    public function primeNumbers(): array
+    {
+        return [
+            [[2], 2],
+            [[3], 3]
+        ];
     }
 
     /**
