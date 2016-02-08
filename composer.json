@@ -9,5 +9,11 @@
     ],
     "require-dev": {
         "phpunit/phpunit": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "LuisRovirosa\\": "src",
+            "LuisRovirosa\\Tests\\": "tests"
+        }
     }
 }
